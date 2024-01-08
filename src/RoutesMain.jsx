@@ -1,5 +1,5 @@
 import { Routes , Route } from "react-router-dom";
-import Reload from "./Reload.jsx";
+import Reload from "./Reload.js";
 
 const RoutesMain = () => {
 
