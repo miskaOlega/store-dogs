@@ -1,11 +1,15 @@
+import { useNavigate } from "react-router-dom";
 import style from "./styles/styleOfReload.module.css";
-import React, { useEffect , useState } from "react";
+import React, { useEffect , useMemo, useState } from "react";
 
 const Reload = () => {
     const [opacity , setOpacity] = useState(["opacity(0%)" , "opacity(0%)" , "opacity(0%)" , "opacity(0%)" , "opacity(0%)" , "opacity(0%)" , "opacity(0%)" , "opacity(0%)" , "opacity(0%)"]);
     const [lapki , setLapki] = useState([]);
     const [i , setI] = useState(0);
     const [g , setG] = useState(0);
+    const navigate = useNavigate()
+
+
     useEffect(() => {
         if(i <= 8) {
             lapki[i] = {styleLapkiId: style.lapki , id: i};
@@ -14,20 +18,28 @@ const Reload = () => {
         console.log(i , lapki)
     } , [i]);
 
+
+
     useEffect(() => {
         const time = setTimeout(() => {
-            if(g <=8) {
+        if(g === 0) {
+            setTimeout(() => {
+                setG(g + 1);
+                opacity[g] = "opacity(100%)";
+            } , 2000) 
+        } else if( g >= 1 && g <=8) {
                 setG(g + 1);
                 opacity[g] = "opacity(100)";
             } else {
                 clearTimeout(time);
+                navigate("/main")
             }
-        } , 1100);
+        } , 1200);
     } , [g]);
 
     
     return (
-        <>
+        <div id={style.body}>
 
         <header id={style.header}>
 
@@ -48,7 +60,7 @@ const Reload = () => {
 
         </footer>
         
-        </>
+        </div>
     )
 }
 
