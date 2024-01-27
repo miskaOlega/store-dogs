@@ -1,0 +1,103 @@
+#header {
+    margin: 0px -7px 0px -7px;
+    height: 100px;
+    background-image: url("./images/dress.png");
+    background-size: contain;
+    background-repeat: repeat-x;  
+    transition: 5s ease all;
+}
+
+#dogRun {
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 100px;
+    width: 100px;
+    animation-name: animDog;
+    animation-duration: 490ms;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    
+}
+
+#article {
+    margin: 10px 5px 0px 5px;
+    border: 1px solid black;
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+
+
+
+.columns {
+    background-color:#5c821a;
+    color: #0f1b07;
+    font-size: 190%;
+}
+
+.columns ul {
+    list-style-type: none;
+}
+
+
+.columns h1 {
+text-align: center;
+}
+
+
+
+#columnLeft {
+    border: 50px solid;
+    border-image-source: url("./images/bons.png");
+    border-image-slice: 576;
+    border-image-repeat: round;
+}
+
+#columnLeft h1 {
+    margin-left: -50px;
+}
+
+#columnLeft ul {
+    margin-right: 20px;
+}
+
+
+
+#columnMidle {
+    border: 5px solid white;
+}
+
+
+
+
+#columnRight {
+    border: 50px solid black;
+    border-image-source: url("./images/ramkaRight.png");
+    border-image-slice: 86.5;
+    border-image-repeat: round;
+}
+
+#columnRight h1 {
+    margin-left: 20px;
+}
+
+#columnRight ul {
+    margin-left: 0px;
+    margin-right: 60px;
+}
+
+@keyframes animDog {
+    from {
+        background-image: url("./images/dog1.png");
+    }
+
+    50% {
+background-image: url("./images/dog2.png");
+    }
+
+    to {
+        background-image: url("./images/dog3.png");
+    }
+}

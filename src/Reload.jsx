@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import style from "./styles/styleOfReload.module.css";
-import React, { useEffect , useMemo, useState } from "react";
+import React, { useEffect , useState } from "react";
 
 const Reload = () => {
     const [opacity , setOpacity] = useState(["opacity(0%)" , "opacity(0%)" , "opacity(0%)" , "opacity(0%)" , "opacity(0%)" , "opacity(0%)" , "opacity(0%)" , "opacity(0%)" , "opacity(0%)"]);
