@@ -4,7 +4,7 @@
     background-image: url("./images/dress.png");
     background-size: contain;
     background-repeat: repeat-x;  
-    transition: 5s ease all;
+    overflow: hidden;
 }
 
 #dogRun {
@@ -17,18 +17,19 @@
     animation-timing-function: ease;
     animation-iteration-count: infinite;
     animation-direction: alternate;
-    
 }
 
 #article {
     margin: 10px 5px 0px 5px;
-    border: 1px solid black;
     display: flex;
     justify-content: space-between;
     
 }
 
-
+.navlink {
+    text-decoration: none;
+    transition: 0.5s all linear;
+}
 
 
 .columns {
@@ -66,7 +67,8 @@ text-align: center;
 
 
 #columnMidle {
-    border: 5px solid white;
+    flex-grow: 1;
+    margin: 0px 10px 0px 10px;
 }
 
 
