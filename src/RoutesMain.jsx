@@ -10,6 +10,7 @@ import DogFood from "./Main/dogFood/dogFood.jsx";
 import Clothes from "./Main/clothes/clothes.jsx";
 import Collar from "./Main/collar/collar.jsx";
 import Leash from "./Main/leash/leash.jsx";
+import MenuForAccounts from "./accounts/MenuForAccounts.jsx";
 const RoutesMain = () => {
 
     return (
@@ -27,6 +28,7 @@ const RoutesMain = () => {
             <Route path="collar" element={<Collar />} />
             <Route path="leash" element={<Leash />} />
          </Route>
+         <Route path="/menuForAccount" element={<MenuForAccounts />}/>
         </Routes>
         </>
     )

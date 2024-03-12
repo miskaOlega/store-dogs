@@ -32,7 +32,7 @@ const Reload = () => {
                 opacity[g] = "opacity(100)";
             } else {
                 clearTimeout(time);
-                navigate("/main")
+                navigate("/main/about")
             }
         } , 1200);
     } , [g]);

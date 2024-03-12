@@ -1,9 +1,11 @@
 import { useEffect, useState } from "react";
 import style from "../styles/styleOfMain.module.css"
 import { NavLink, Outlet } from "react-router-dom";
+import icon from "../styles/images/iconForAccount.png"
 
 const Main = () => {
 const [dogRun , setDogRun] = useState({transform: "translateX(-100px)"});
+
     useEffect( () => {
         setTimeout(() => {
             if(dogRun.transform === "translateX(-100px)") {
@@ -14,10 +16,20 @@ const [dogRun , setDogRun] = useState({transform: "translateX(-100px)"});
         } , 15000);
     } , [dogRun]);
 
-    const active = ({isActive}) => isActive ? {color: "red" , fontSize: "35px" , } : {color: "black"};
+    const active = ({isActive}) =>  isActive ? {color: "red" , fontSize: "110%"} : {color: "black"};
 
     return (
         <>
+        <div id={style.strokeAccount}>
+        <div id={style.containerAccount}>
+        <div style={{backgroundImage: `url(${icon})` }} id={style.circleAccount}></div>
+        <div id={style.textAccount}><p><NavLink to="/menuForAccount">Войдите в аккаунт</NavLink></p></div>
+
+
+        </div>
+
+        </div>
+
         <header id={style.header}>
         <div style={dogRun} id={style.dogRun}></div>
         </header>
@@ -26,7 +38,7 @@ const [dogRun , setDogRun] = useState({transform: "translateX(-100px)"});
 
     
         <div className={style.columns} id={style.columnLeft}>
-
+        
         <h1>Блог</h1>
         <ul>
             <li><NavLink className={style.navlink} style={active} to="about">О Жорике</NavLink></li>
@@ -35,7 +47,7 @@ const [dogRun , setDogRun] = useState({transform: "translateX(-100px)"});
             <li><NavLink className={style.navlink} style={active} to="foto">Галерея</NavLink></li>
             <li><NavLink className={style.navlink} style={active} to="games">Розыгрыши</NavLink></li>
         </ul>
-
+        
         </div>
 
         
@@ -49,7 +61,7 @@ const [dogRun , setDogRun] = useState({transform: "translateX(-100px)"});
         <div className={style.columns} id={style.columnRight}>
             <h1>Магазин</h1>
             <ul>
-                <li><NavLink className={style.navlink} style={active} to="dogFood">Собачья еда</NavLink></li>
+                <li><NavLink className={style.navlink} style={active} to="dogFood">Еда для собак</NavLink></li>
                 <li><NavLink className={style.navlink} style={active} to="clothes">Одежки</NavLink></li>
                 <li><NavLink className={style.navlink} style={active} to="collar">Ошейники</NavLink></li>
                 <li><NavLink className={style.navlink} style={active} to="leash">Поводки</NavLink></li>
@@ -57,9 +69,9 @@ const [dogRun , setDogRun] = useState({transform: "translateX(-100px)"});
         </div>
 
         </article>
-        
+     
         </>
     )
 }
 
-export default Main;
+export default Main
