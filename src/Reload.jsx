@@ -36,7 +36,6 @@ const Reload = () => {
             }
         } , 1200);
     } , [g]);
-
     
     return (
         <div id={style.body}>

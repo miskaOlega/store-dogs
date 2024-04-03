@@ -1,0 +1,16 @@
+{
+    "accounts": [
+        {
+            "id": 0 ,
+            "name": "Olejon" ,
+            "password": "Assasin123" ,
+            "mail": "pleshkovo@inbox.ru"
+        } ,
+        {
+            "id": 1 ,
+            "name": "Miska" ,
+            "password": "Gansterzip228" ,
+            "mail": "pleshkovon@inbox.ru"
+        }
+    ]
+}

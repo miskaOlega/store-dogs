@@ -1,30 +1,30 @@
 div#menu {
-    background-color: azure;
+    height: 100vmin;
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    margin-left: -6px;
-    h1 {
-        text-align: center;
-        font-size: 270%;
-    }
+    align-items: center;
 }
 
 div#form {
-    display: flex;
-    flex-direction: column;
-    align-self: center;
-    width: 50%;
-}
-
-div#form form {
-    text-align: center;
-    width: 100%;
-    input {
-        width: 40%;
-        height: 45px;
-        margin-bottom: 30px;
+    h1 {
+        text-align: center;
+    };
+    form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        input {
+            width: 400px;
+            height: 25px;
+        };
+        button {
+            width: 300px;
+        }
     }
 }
+
 
 ::placeholder {
     text-align: center;
