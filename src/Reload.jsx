@@ -15,7 +15,6 @@ const Reload = () => {
             lapki[i] = {styleLapkiId: style.lapki , id: i};
             setI(i + 1);
         };
-        console.log(i , lapki)
     } , [i]);
 
 

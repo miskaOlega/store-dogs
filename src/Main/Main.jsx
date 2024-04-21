@@ -1,10 +1,21 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useMemo, useState } from "react";
 import style from "../styles/styleOfMain.module.css"
 import { NavLink, Outlet } from "react-router-dom";
-import icon from "../styles/images/iconForAccount.png"
+import icon from "../styles/images/iconForAccount.png";
+import {ContextAccounts} from '../server/accounts';
 
 const Main = () => {
-const [dogRun , setDogRun] = useState({transform: "translateX(-100px)"});
+    const {account} = useContext(ContextAccounts);
+    const [inAccountText , setInAccountText] = useState(<NavLink to="/menuForAccount">Войти в аккаунт</NavLink>);
+    const [dogRun , setDogRun] = useState({transform: "translateX(-100px)"});
+
+    useMemo(() => {
+        if(account) {
+            setInAccountText(account.name)
+        }
+    } , [account]);
+
+    
 
     useEffect( () => {
         setTimeout(() => {
@@ -23,7 +34,7 @@ const [dogRun , setDogRun] = useState({transform: "translateX(-100px)"});
         <div id={style.strokeAccount}>
         <div id={style.containerAccount}>
         <div style={{backgroundImage: `url(${icon})` }} id={style.circleAccount}></div>
-        <div id={style.textAccount}><p><NavLink to="/menuForAccount">Войдите в аккаунт</NavLink></p></div>
+        <div id={style.textAccount}><p>{inAccountText}</p></div>
 
 
         </div>

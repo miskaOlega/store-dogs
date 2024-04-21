@@ -1,0 +1,16 @@
+div#container {
+    height: 100vh;
+    display: flex;
+}
+
+div#columnLeft {
+    border: 5px solid red;
+    flex-basis: 50%;
+    margin: 10px;
+}
+
+div#columnRight {
+    flex-basis: 50%;
+    margin: 10px;
+    border: 5px solid yellow;
+}

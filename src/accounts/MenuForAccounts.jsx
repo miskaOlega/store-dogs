@@ -5,7 +5,7 @@ import { useContext } from "react";
 import { useNavigate } from "react-router-dom";
 
 const MenuForAccounts = () => {
-   const {serv , setServ , account , setAccount} = useContext(ContextAccounts);
+   const {serv , setAccount} = useContext(ContextAccounts);
    const navigate = useNavigate()
 
     const {handleSubmit , register , formState: {errors}} = useForm();
@@ -18,7 +18,8 @@ const MenuForAccounts = () => {
         } else if(nick) {
         if(nick.password === date.password && nick.mail === date.mail) {
             console.log(true);
-            navigate("/main/about")
+            setAccount(date)
+            navigate("/account")
         } else {
             console.log(false)
         }

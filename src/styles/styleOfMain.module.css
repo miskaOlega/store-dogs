@@ -31,6 +31,7 @@ div#containerAccount {
 }
 
 div#circleAccount {
+    margin-top: 5px;
     margin-right: 10px;
 }
 
@@ -65,7 +66,6 @@ div#circleAccount {
     background-color:#5c821a;
     color: #0f1b07;
     font-size: 190%;
-    flex-basis: 350px;
     font-family: cursive;
     display: flex;
     flex-direction: column;
@@ -83,6 +83,7 @@ div#circleAccount {
 
 
 #columnLeft {
+    flex-basis: 35vh;
     border: 50px solid;
     border-image-source: url("./images/bons.png");
     border-image-slice: 576;
@@ -99,6 +100,7 @@ div#circleAccount {
 }
 
 #columnRight {
+    flex-basis: 35vh;
     border: 50px solid black;
     border-image-source: url("./images/ramkaRight.png");
     border-image-slice: 86.5;

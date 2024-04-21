@@ -11,7 +11,9 @@ import Clothes from "./Main/clothes/clothes.jsx";
 import Collar from "./Main/collar/collar.jsx";
 import Leash from "./Main/leash/leash.jsx";
 import MenuForAccounts from "./accounts/MenuForAccounts.jsx";
-import Admin from "./accounts/admin/Admin.jsx";
+import Account from "./accounts/account/Account.jsx";
+
+
 const RoutesMain = () => {
 
     return (
@@ -30,7 +32,7 @@ const RoutesMain = () => {
             <Route path="leash" element={<Leash />} />
          </Route>
          <Route path="/menuForAccount" element={<MenuForAccounts />}/>
-         <Route path="/Admin" element={<Admin />} />
+         <Route path="/account" element={<Account />} />
         </Routes>
         </>
     )
