@@ -8,7 +8,18 @@ const {account} = useContext(ContextAccounts);
     return (
     <div id={style.container}>
 
-        <div id={style.columnLeft}></div>
+        <div id={style.columnLeft}>
+            <ul>
+                <li>Ваш профиль</li>
+                <li>история покупок</li>
+                <li>текст</li>
+                <li>текст</li>
+                <li>текст</li>
+                <li>текст</li>
+                <li>текст</li>
+                
+            </ul>
+        </div>
         <div id={style.columnRight}></div>
 
     </div>  

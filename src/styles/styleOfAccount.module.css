@@ -5,12 +5,23 @@ div#container {
 
 div#columnLeft {
     border: 5px solid red;
-    flex-basis: 50%;
+    flex-basis: 20%;
     margin: 10px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    ul {
+        list-style-type: none;
+        li {
+            color: red;
+            font-size:xx-large;
+            margin-top: 20px;
+        }
+    }
 }
 
 div#columnRight {
-    flex-basis: 50%;
+    flex-basis: 80%;
     margin: 10px;
     border: 5px solid yellow;
 }
