@@ -12,6 +12,7 @@ import Collar from "./Main/collar/collar.jsx";
 import Leash from "./Main/leash/leash.jsx";
 import MenuForAccounts from "./accounts/MenuForAccounts.jsx";
 import Account from "./accounts/account/Account.jsx";
+import YourProfile from "./accounts/account/your profile/yourProfile.jsx";
 
 
 const RoutesMain = () => {
@@ -32,7 +33,9 @@ const RoutesMain = () => {
             <Route path="leash" element={<Leash />} />
          </Route>
          <Route path="/menuForAccount" element={<MenuForAccounts />}/>
-         <Route path="/account" element={<Account />} />
+         <Route path="/account" element={<Account />} >
+            <Route path="yourProfile" element={<YourProfile />}/>
+            </Route>
         </Routes>
         </>
     )

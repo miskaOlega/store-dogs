@@ -13,9 +13,7 @@ const MenuForAccounts = () => {
 
     const submitForm = date => {
         const nick = serv.find(i => i.name === date.name);
-        if(date.name === "AdminJorik" && date.password === "Admin123" && date.mail === "none") {
-            navigate("/Admin");
-        } else if(nick) {
+        if(nick) {
         if(nick.password === date.password && nick.mail === date.mail) {
             console.log(true);
             setAccount(date)
