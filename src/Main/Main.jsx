@@ -11,7 +11,7 @@ const Main = () => {
 
     useMemo(() => {
         if(account) {
-            setInAccountText(account.name)
+            setInAccountText(<NavLink to="/account">{account.name}</NavLink>)
         }
     } , [account]);
 

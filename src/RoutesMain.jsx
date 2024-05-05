@@ -13,6 +13,7 @@ import Leash from "./Main/leash/leash.jsx";
 import MenuForAccounts from "./accounts/MenuForAccounts.jsx";
 import Account from "./accounts/account/Account.jsx";
 import YourProfile from "./accounts/account/your profile/yourProfile.jsx";
+import HistoryBuy from "./accounts/account/historyBuy/historyBuy.jsx";
 
 
 const RoutesMain = () => {
@@ -35,6 +36,7 @@ const RoutesMain = () => {
          <Route path="/menuForAccount" element={<MenuForAccounts />}/>
          <Route path="/account" element={<Account />} >
             <Route path="yourProfile" element={<YourProfile />}/>
+            <Route path="historyBuy" element ={<HistoryBuy />} />
             </Route>
         </Routes>
         </>
