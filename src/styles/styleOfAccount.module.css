@@ -1,6 +1,10 @@
 div#container {
     height: 100vh;
     display: flex;
+    background-image: url('./images/backgroundAccaunt.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover
 }
 
 div#columnLeft {

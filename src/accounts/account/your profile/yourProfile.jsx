@@ -4,6 +4,7 @@ const YourProfile = () => {
     const [account] = useOutletContext();
     return (
         <>
+        {account.name}
         </>
     )
 }
